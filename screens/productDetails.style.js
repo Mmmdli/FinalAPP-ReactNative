@@ -33,12 +33,14 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        width: -44,   
+        width: SIZES.width,   
      },
      cartBtn: {
         width: SIZES.width*0.7,
         backgroundColor: COLORS.black,
-        
+        padding: SIZES.xSmall -4,
+        borderRadius: SIZES.large,
+        marginLeft: 12
      },
      titleRow: {
          marginHorizontal: 20,
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
         marginTop: -5
      },
      rating: {
-        marginTop: SIZES.xSmall,
+        marginTop: SIZES.xSmall ,
         flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "center",
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
       paddingHorizontal: SIZES.xSmall,
      },
      descriptionWrapper: {
-      marginTop: SIZES.large -5,
+      marginTop: SIZES.large -13,
       marginHorizontal: SIZES.large
      },
      description: {
@@ -91,12 +93,18 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.secondary,
         marginRight: SIZES.small,
         marginLeft: SIZES.small,
-        padding: 5,
+        padding: 7,
         borderRadius: SIZES.large 
      },
+     cartTitle: {
+        marginLeft: SIZES.small,
+        fontFamily: "semibold",
+        fontSize: SIZES.medium,
+        color: COLORS.lightWhite
+     },
      title: {
-        fontFamily: "bold",
-        fontSize: SIZES.large
+      fontFamily: "bold",
+      fontSize: SIZES.large,
      },
      price: {
         paddingHorizontal: 10,
@@ -106,7 +114,16 @@ const styles = StyleSheet.create({
      priceWrapper: {
         backgroundColor: COLORS.secondary,
         borderRadius: SIZES.large
-     }
+     },
+     addCart: {
+      width:37,
+      height: 37,
+      borderRadius: 50,
+      margin: SIZES.medium,
+      backgroundColor: COLORS.black,
+      alignItems: 'center',
+      justifyContent: 'center'
+     },
 
 })
 
