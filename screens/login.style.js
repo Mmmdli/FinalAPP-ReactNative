@@ -4,8 +4,8 @@ import { COLORS, SIZES } from "../constants";
 
 const styles = StyleSheet.create({
     cover: {
-        height: SIZES.height/2.4,
-        width: SIZES.width-60,
+        height: SIZES.height/3,
+        width: SIZES.width,
         resizeMode: "contain",
         marginBottom: SIZES.xxLarge,
 
@@ -40,6 +40,17 @@ const styles = StyleSheet.create({
     }),
     iconStyle: {
         marginRight: 10
+    },
+    errorMessage: {
+       color: COLORS.red,
+       fontFamily: "regular",
+       marginTop: 5,
+       marginLeft: 5,
+       fontSize: SIZES.xSmall
+    },
+    registration: {
+        marginTop: 20,
+        textAlign: "center"
     }
 });
 
