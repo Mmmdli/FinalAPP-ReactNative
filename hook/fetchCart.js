@@ -12,7 +12,7 @@ const fetchCart = async()=>{
         const token = await AsyncStorage.getItem('token');
 
         try {
-            const endpoint = 'http://172.16.0.35/api/carts/find';
+            const endpoint = 'http://192.168.1.106/api/carts/find';
            
    
            const headers = {
@@ -20,19 +20,16 @@ const fetchCart = async()=>{
                 'token' : 'Bearer '+ JSON.parse(token)
            };
           const response = await axios.get(endpoint, {headers})
-          const newData = JSON.stringify(response.data);  
+          const cartProducts = response.data[0].products;  
 
-          const parsedData = JSON.parse(newData);
-          const products = parsedData[0].products;
-           await AsyncStorage.setItem('cartCount', JSON.stringify(products.length))
-          setData(products);
+          setData(cartProducts);
 
           setLoader(false);
         } catch (error) {
             setError(error)
         }finally{
             setLoader(false);
-        }
+        } 
     }
 
     useEffect(() =>{

@@ -4,11 +4,14 @@ import ProductRow from "./products/ProductRow";
 import ProductList from "./products/ProductList";
 import BackBtn from "./BackBtn";
 import Button from "./Button";
+// import TxtInput from "./auth/TxtInput"
+import CartTile from "./cart/cartTile";
 export {
     Welcome,
     ProductCardView,
     ProductRow,
     ProductList,
     BackBtn,
-    Button
+    Button,
+    CartTile
 }

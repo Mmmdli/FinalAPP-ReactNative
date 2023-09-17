@@ -68,18 +68,17 @@ try {
   let favoritesObj = existingItem ? JSON.parse(existingItem) : {};
 
   if(favoritesObj [productId]){
-    delete favoritesId[productId];
+    delete favoritesObj[productId];
 
-    console.log("deleted");
-    setFavorites(false)
+     setFavorites(false)
   }else{
     favoritesObj [productId] = productObj;
-    console.log("added to fav");
-    setFavorites(true)
+     setFavorites(true)
   }
   await AsyncStorage.setItem(favoritesId, JSON.stringify(favoritesObj));
-} catch (error) {
   
+} catch (error) {
+  console.log(error);
 }
 
    };
@@ -120,7 +119,6 @@ try {
       const favorites = JSON.parse(favoritesObj);
 
       if(favorites[item._id]){
-        console.log(item._id);
         setFavorites(true)
       }
     }
@@ -131,7 +129,7 @@ try {
 
   const AddToCart = async (itemId, quantity) => {
     const token = await AsyncStorage.getItem("token");
-    const endpoint = "http://172.16.0.35/api/carts";
+    const endpoint = "http://192.168.1.106/api/carts";
     console.log(token);
     const data = {
       cartItem: itemId,
@@ -161,7 +159,7 @@ try {
 
         <TouchableOpacity onPress={()=>handlePress()}
           >
-          <Ionicons name="heart" size={30} color={COLORS.primary} />
+          <Ionicons name={favorites ? 'heart' : 'heart-outline'} size={30} color={COLORS.primary} />
         </TouchableOpacity>
       </View>
       <Image source={{
