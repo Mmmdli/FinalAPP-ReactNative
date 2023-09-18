@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
           
     },
     titletxt: {
-        width:'150%',
+        width:'350%',
         fontFamily: "bold",
         fontSize: SIZES.xLarge,
         letterSpacing: 4,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     image: {
-        width: "100%",
+        width: "250%",
         height: 65,
         borderRadius: SIZES.small,
         resizeMode: "cover"
@@ -61,6 +61,11 @@ const styles = StyleSheet.create({
         color: COLORS.gray,
         marginTop: 3,
         textTransform: "capitalize"
+    },
+    orders: {
+        backgroundColor: COLORS.lightWhite,
+        paddingHorizontal: 30,
+        borderRadius:12
     }
 })
 export default styles;

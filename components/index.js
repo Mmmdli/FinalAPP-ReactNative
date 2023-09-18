@@ -6,6 +6,7 @@ import BackBtn from "./BackBtn";
 import Button from "./Button";
 // import TxtInput from "./auth/TxtInput"
 import CartTile from "./cart/cartTile";
+import {OrdersTile} from '../components'
 export {
     Welcome,
     ProductCardView,
@@ -13,5 +14,6 @@ export {
     ProductList,
     BackBtn,
     Button,
-    CartTile
+    CartTile,
+    OrdersTile,
 }

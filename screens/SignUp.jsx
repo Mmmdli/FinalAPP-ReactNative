@@ -53,7 +53,7 @@ const SignUp = ({navigation}) => {
    const registerUser = async(values)=> {
       setLoader(true);
        try {
-      const endpoint = 'http://172.16.0.35:3000/api/register';
+      const endpoint = 'http://172.16.0.56:3000/api/register';
       const data = values;
 
       const response = await axios.post(endpoint, data);

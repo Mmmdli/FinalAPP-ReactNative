@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
        fontSize: SIZES.xLarge,
        color: COLORS.primary,
        alignItems: "center",
-       marginBottom: SIZES.xxLarge
+       marginBottom: SIZES.xxLarge,
     },
     wrapper:{
         marginBottom: 20,

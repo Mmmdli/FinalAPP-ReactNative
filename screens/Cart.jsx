@@ -1,4 +1,4 @@
-import { StyleSheet, Text,Image, TouchableOpacity, View, ActivityIndicator } from 'react-native'
+import { StyleSheet, Text,Image, TouchableOpacity, View, ActivityIndicator, Button } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { COLORS, SIZES } from "../constants";
@@ -26,14 +26,31 @@ const Cart = ({navigation}) => {
        <Text style={styles.titletxt}>Cart</Text>
       </View>
 
-      {loading ? (<ActivityIndicator/>)
-      : (<FlatList
+      {loading ? (
+      <ActivityIndicator/>)
+      : (
+      <FlatList
        data={data}
        keyExtractor={(item) => item._id}
-       renderItem={({item}) => 
-        <CartTile item={item} onPress={()=>{setSelect(!select),setSelected(item)}} select={select}/>
-       } 
+       renderItem={({item}) => (
+        <CartTile
+         item={item} 
+         onPress={()=>{
+          setSelect(!select),setSelected(item)
+        }}
+         select={select}
+         />
+       )} 
+      />
+      )}
+
+      {select === false ? (<View></View>)
+      : (
+      <Button title={'Checkout'}
+      isValid={select}
+      onPress={()=> {}}
       />)}
+
      </SafeAreaView>
   )
 }

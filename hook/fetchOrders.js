@@ -2,7 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useState, useEffect } from "react";
 
 
-const fetchCart = async()=>{
+const fetchOrders = async()=>{
     const [data,setData] = useState([]);
     const [loading, setLoader] = useState(false);
     const [error, setError] = useState(null);
@@ -12,17 +12,16 @@ const fetchCart = async()=>{
         const token = await AsyncStorage.getItem('token');
 
         try {
-            const endpoint = 'http://172.16.0.56/api/cart/find';
+            const endpoint = 'http://172.16.0.56/api/orders';
            
    
            const headers = {
                'Content-Type': 'application/json',
                 'token' : 'Bearer '+ JSON.parse(token)
            };
-          const response = await axios.get(endpoint, {headers})
-          const cartProducts = response.data[0].products;  
+          const response = await axios.get(endpoint, {headers}) 
 
-          setData(cartProducts);
+          setData(response.data);
 
           setLoader(false);
         } catch (error) {
@@ -45,4 +44,4 @@ const fetchCart = async()=>{
 
 };
 
-export default fetchCart;
+export default fetchOrders;
