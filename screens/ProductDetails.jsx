@@ -195,7 +195,7 @@ const ProductDetails = ({ navigation }) => {
 
   const AddToCart = async (itemId, quantity) => {
     const token = await AsyncStorage.getItem("token");
-    const endpoint = "http://172.16.0.56/api/carts";
+    const endpoint = "http://192.168.1.106/api/carts";
     console.log(token);
     const data = {
       cartItem: itemId,

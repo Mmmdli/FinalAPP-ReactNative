@@ -115,14 +115,14 @@ const deleteAccount = () => {
 
          <View style={{width: '100%'}}>
           <Image
-            source={require('../assets/images/space.jpg')}
+            source={require('../assets/images/landscape.jpg')}
             style={style.cover}
           />
 
          </View>
           <View style={style.profileContainer}>
           <Image
-            source={require('../assets/images/profile.jpg')}
+            source={require('../assets/images/profile2.jpg')}
             style={style.profile}
           />
           <Text style={style.name}>

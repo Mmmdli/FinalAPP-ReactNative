@@ -4,10 +4,14 @@ import { COLORS, SIZES } from "../constants";
 
 const styles = StyleSheet.create({
     cover: {
-        height: SIZES.height/3,
+        height: SIZES.height/2,
         width: SIZES.width,
         resizeMode: "contain",
         marginBottom: SIZES.xxLarge,
+       borderRadius: 12,
+       marginLeft:-18,
+       marginTop: -39
+    
 
     },
     title: {

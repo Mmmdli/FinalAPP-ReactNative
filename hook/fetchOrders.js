@@ -12,7 +12,7 @@ const fetchOrders = async()=>{
         const token = await AsyncStorage.getItem('token');
 
         try {
-            const endpoint = 'http://172.16.0.56/api/orders';
+            const endpoint = 'http://192.168.1.106/api/orders';
            
    
            const headers = {

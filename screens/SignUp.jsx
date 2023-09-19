@@ -53,7 +53,7 @@ const SignUp = ({navigation}) => {
    const registerUser = async(values)=> {
       setLoader(true);
        try {
-      const endpoint = 'http://172.16.0.56:3000/api/register';
+      const endpoint = 'http://192.168.1.106:3000/api/register';
       const data = values;
 
       const response = await axios.post(endpoint, data);
@@ -73,12 +73,15 @@ const SignUp = ({navigation}) => {
        <View>
          <BackBtn onPress={()=> navigation.goBack()}/>
          <Image
-           source={require('../assets/images/housewares-2.jpg')}
+           source={require('../assets/images/photolo.jpg')}
            style={{
-            height: SIZES.height,
+            height: SIZES.height/2,
             width: SIZES.width,
             resizeMode: "contain",
             marginBottom: SIZES.xxLarge,
+           borderRadius: 12,
+           marginLeft:-18,
+           marginTop: -39
     
         }}
          />
